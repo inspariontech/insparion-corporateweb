@@ -15,6 +15,7 @@ if [[ ! -f .env ]]; then
 fi
 
 docker build \
+  --platform linux/amd64 \
   -t "$IMAGE:$TAG" \
   -t "$IMAGE:latest" \
   .
