@@ -249,7 +249,7 @@ const content = {
         sent: 'Teşekkürler! En kısa sürede dönüş yapacağız.',
         sentNote: 'İletiniz alındı.',
         error:
-          'Bir hata oluştu. Lütfen tekrar deneyin ya da tech@insparion.com.tr adresine yazın.',
+          'Bir hata oluştu. Lütfen tekrar deneyin ya da info@insparion.com.tr adresine yazın.',
       },
     },
     footer: {
@@ -521,7 +521,7 @@ const content = {
         sent: "Thank you! We'll get back to you shortly.",
         sentNote: 'Your message has been received.',
         error:
-          'Something went wrong. Please try again or email tech@insparion.com.tr.',
+          'Something went wrong. Please try again or email info@insparion.com.tr.',
       },
     },
     footer: {
@@ -570,20 +570,17 @@ interface I18nCtx {
 const Ctx = createContext<I18nCtx | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>(() => {
-    if (typeof window === 'undefined') return 'en'
-    return (localStorage.getItem('lang') as Lang) || 'en'
-  })
+  // Site tek dilli: İngilizce. Dil değiştirme kaldırıldı.
+  const [lang, setLang] = useState<Lang>('en')
 
   useEffect(() => {
-    localStorage.setItem('lang', lang)
-    document.documentElement.lang = lang
-  }, [lang])
+    document.documentElement.lang = 'en'
+  }, [])
 
   const value: I18nCtx = {
     lang,
     setLang,
-    toggle: () => setLang(lang === 'tr' ? 'en' : 'tr'),
+    toggle: () => setLang('en'),
     c: content[lang] as Content,
   }
 

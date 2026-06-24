@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { useI18n } from '../i18n'
 
@@ -9,9 +10,9 @@ export default function Footer() {
       <div className="container-x py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <a href="/" aria-label="INSPARION">
+            <Link to="/" aria-label="INSPARION">
               <Logo variant="white" className="h-[7.5rem] w-auto" />
-            </a>
+            </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/55">
               {c.footer.tagline}
             </p>
@@ -19,10 +20,10 @@ export default function Footer() {
               {c.footer.slogan}
             </p>
             <a
-              href="mailto:tech@insparion.com.tr"
+              href="mailto:info@insparion.com.tr"
               className="group mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
-              tech@insparion.com.tr
+              info@insparion.com.tr
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
@@ -54,13 +55,13 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6 text-sm text-white/40">
             {c.footer.legal.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.href}
                 className="transition-colors hover:text-white/70"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

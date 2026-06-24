@@ -6,26 +6,6 @@ import Footer from './Footer'
 import { useI18n } from '../i18n'
 import { legalContent, type LegalKey } from '../legalContent'
 
-function LangSwitch() {
-  const { lang, setLang } = useI18n()
-  return (
-    <div className="flex items-center rounded-full border border-white/10 bg-white/[0.04] p-0.5 text-xs font-semibold">
-      {(['tr', 'en'] as const).map((l) => (
-        <button
-          key={l}
-          onClick={() => setLang(l)}
-          className={`rounded-full px-2.5 py-1 uppercase transition-colors ${
-            lang === l ? 'bg-white text-ink-900' : 'text-white/60 hover:text-white'
-          }`}
-          aria-pressed={lang === l}
-        >
-          {l}
-        </button>
-      ))}
-    </div>
-  )
-}
-
 export default function LegalPage({ doc }: { doc: LegalKey }) {
   const { lang } = useI18n()
   const data = legalContent[lang][doc]
@@ -46,16 +26,13 @@ export default function LegalPage({ doc }: { doc: LegalKey }) {
           <Link to="/" aria-label="INSPARION">
             <Logo variant="white" className="h-12 w-auto sm:h-14" />
           </Link>
-          <div className="flex items-center gap-3">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span className="hidden sm:inline">{backLabel}</span>
-            </Link>
-            <LangSwitch />
-          </div>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="hidden sm:inline">{backLabel}</span>
+          </Link>
         </div>
       </header>
 
@@ -115,10 +92,10 @@ export default function LegalPage({ doc }: { doc: LegalKey }) {
               <ArrowLeft className="h-4 w-4 rotate-180 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
-              href="mailto:tech@insparion.com.tr"
+              href="mailto:info@insparion.com.tr"
               className="text-sm text-white/50 transition-colors hover:text-white/80"
             >
-              tech@insparion.com.tr
+              info@insparion.com.tr
             </a>
           </div>
         </article>

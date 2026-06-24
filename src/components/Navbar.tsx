@@ -4,30 +4,6 @@ import { ArrowUpRight, Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import { useI18n } from '../i18n'
 
-function LangSwitch({ className = '' }: { className?: string }) {
-  const { lang, setLang } = useI18n()
-  return (
-    <div
-      className={`flex items-center rounded-full border border-white/10 bg-white/[0.04] p-0.5 text-xs font-semibold ${className}`}
-    >
-      {(['tr', 'en'] as const).map((l) => (
-        <button
-          key={l}
-          onClick={() => setLang(l)}
-          className={`rounded-full px-2.5 py-1 uppercase transition-colors ${
-            lang === l
-              ? 'bg-white text-ink-900'
-              : 'text-white/60 hover:text-white'
-          }`}
-          aria-pressed={lang === l}
-        >
-          {l}
-        </button>
-      ))}
-    </div>
-  )
-}
-
 export default function Navbar() {
   const { c } = useI18n()
   const [scrolled, setScrolled] = useState(false)
@@ -78,7 +54,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <LangSwitch className="hidden sm:flex" />
             <a
               href="#contact"
               className="group hidden items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-900 transition-colors hover:bg-white/90 md:inline-flex"
@@ -118,16 +93,13 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <div className="flex items-center justify-between gap-3 px-2 pt-3">
-                <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
-                  className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink-900"
-                >
-                  {c.nav.cta} <ArrowUpRight className="h-4 w-4" />
-                </a>
-                <LangSwitch />
-              </div>
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-flex items-center justify-center gap-1.5 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink-900"
+              >
+                {c.nav.cta} <ArrowUpRight className="h-4 w-4" />
+              </a>
             </div>
           </motion.div>
         )}

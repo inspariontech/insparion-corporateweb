@@ -34,7 +34,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: '1. Veri Sorumlusu',
           p: [
             'Kişisel verileriniz, veri sorumlusu sıfatıyla INSPARION (bundan sonra "INSPARION", "Şirket" veya "biz") tarafından aşağıda açıklanan kapsamda işlenmektedir.',
-            'İletişim: tech@insparion.com.tr — insparion.com.tr',
+            'İletişim: info@insparion.com.tr — insparion.com.tr',
           ],
         },
         {
@@ -103,7 +103,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '9. Başvuru Yöntemi',
           p: [
-            'Yukarıdaki haklarınıza ilişkin taleplerinizi tech@insparion.com.tr adresine iletebilirsiniz. Talepleriniz, niteliğine göre en kısa sürede ve en geç 30 gün içinde ücretsiz olarak sonuçlandırılır.',
+            'Yukarıdaki haklarınıza ilişkin taleplerinizi info@insparion.com.tr adresine iletebilirsiniz. Talepleriniz, niteliğine göre en kısa sürede ve en geç 30 gün içinde ücretsiz olarak sonuçlandırılır.',
           ],
         },
       ],
@@ -152,7 +152,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '6. Haklarınız',
           p: [
-            'Kişisel verilerinize ilişkin KVKK kapsamındaki haklarınız için KVKK Aydınlatma Metni’ni inceleyebilir; taleplerinizi tech@insparion.com.tr adresine iletebilirsiniz.',
+            'Kişisel verilerinize ilişkin KVKK kapsamındaki haklarınız için KVKK Aydınlatma Metni’ni inceleyebilir; taleplerinizi info@insparion.com.tr adresine iletebilirsiniz.',
           ],
         },
         {
@@ -170,7 +170,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '9. İletişim',
           p: [
-            'Gizlilik uygulamalarımıza ilişkin soru ve talepleriniz için: tech@insparion.com.tr',
+            'Gizlilik uygulamalarımıza ilişkin soru ve talepleriniz için: info@insparion.com.tr',
           ],
         },
       ],
@@ -189,7 +189,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
           h: '1. Data Controller',
           p: [
             'Your personal data is processed by INSPARION (the "Company", "we") as data controller, within the scope described below.',
-            'Contact: tech@insparion.com.tr — insparion.com.tr',
+            'Contact: info@insparion.com.tr — insparion.com.tr',
           ],
         },
         {
@@ -258,7 +258,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '9. How to Apply',
           p: [
-            'You may submit requests regarding your rights to tech@insparion.com.tr. Requests are concluded free of charge as soon as possible and within 30 days at the latest.',
+            'You may submit requests regarding your rights to info@insparion.com.tr. Requests are concluded free of charge as soon as possible and within 30 days at the latest.',
           ],
         },
       ],
@@ -307,7 +307,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '6. Your Rights',
           p: [
-            'For your rights regarding personal data under the KVKK, please see our Data Protection (KVKK) Notice; you may send requests to tech@insparion.com.tr.',
+            'For your rights regarding personal data under the KVKK, please see our Data Protection (KVKK) Notice; you may send requests to info@insparion.com.tr.',
           ],
         },
         {
@@ -325,7 +325,7 @@ export const legalContent: Record<Lang, Record<LegalKey, LegalDoc>> = {
         {
           h: '9. Contact',
           p: [
-            'For questions and requests regarding our privacy practices: tech@insparion.com.tr',
+            'For questions and requests regarding our privacy practices: info@insparion.com.tr',
           ],
         },
       ],

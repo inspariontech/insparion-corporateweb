@@ -83,7 +83,7 @@ export default function Contact() {
 
               <div className="mt-10 space-y-4">
                 <a
-                  href="mailto:tech@insparion.com.tr"
+                  href="mailto:info@insparion.com.tr"
                   className="group flex items-center gap-4 text-white/80 transition-colors hover:text-white"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
@@ -93,7 +93,7 @@ export default function Contact() {
                     <span className="block text-xs uppercase tracking-wider text-white/40">
                       {c.contact.emailLabel}
                     </span>
-                    tech@insparion.com.tr
+                    info@insparion.com.tr
                   </span>
                 </a>
                 <div className="flex items-center gap-4 text-white/80">
