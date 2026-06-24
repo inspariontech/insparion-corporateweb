@@ -6,6 +6,10 @@
       <stop offset="1" stop-color="#C84DF5" />
     </linearGradient>
   </defs>
-  <circle cx="32" cy="32" r="26" stroke="url(#fav)" stroke-width="4" fill="none" />
-  <path d="M32 18 L44 46 L20 46 Z" fill="url(#fav)" />
+  <!-- üst yay -->
+  <path d="M6.9 25.3 A26 26 0 0 1 57.1 25.3" stroke="url(#fav)" stroke-width="4" stroke-linecap="round" fill="none" />
+  <!-- alt yay -->
+  <path d="M57.1 38.7 A26 26 0 0 1 6.9 38.7" stroke="url(#fav)" stroke-width="4" stroke-linecap="round" fill="none" />
+  <!-- A üçgeni -->
+  <path d="M32 18.5 L41 45.5 L23 45.5 Z" fill="url(#fav)" />
 </svg>
