@@ -4,10 +4,55 @@ import { ArrowRight, Mail, MapPin, Send } from 'lucide-react'
 import Reveal from './Reveal'
 import { useI18n } from '../i18n'
 
+type Status = 'idle' | 'sending' | 'sent' | 'error'
+
+// Web3Forms access key — .env içindeki VITE_WEB3FORMS_ACCESS_KEY'den okunur.
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
+  | string
+  | undefined
+
 export default function Contact() {
   const { c } = useI18n()
   const f = c.contact.form
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState<Status>('idle')
+  const sent = status === 'sent'
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    if (status === 'sending' || status === 'sent') return
+    const form = e.currentTarget
+    const data = Object.fromEntries(new FormData(form)) as Record<string, string>
+    // Bal küpü (honeypot) doluysa: bot — sessizce başarı göster, gönderme.
+    if (data['bot-field']) {
+      setStatus('sent')
+      return
+    }
+    setStatus('sending')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          subject: 'INSPARION — Yeni iletişim formu',
+          from_name: 'INSPARION Web',
+          name: data.name,
+          email: data.email,
+          company: data.company || '—',
+          message: data.message,
+        }),
+      })
+      const json = await res.json()
+      if (!json.success) throw new Error(json.message || 'Gönderim başarısız')
+      setStatus('sent')
+      form.reset()
+    } catch {
+      setStatus('error')
+    }
+  }
 
   return (
     <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
@@ -67,13 +112,13 @@ export default function Contact() {
 
             {/* Right: form */}
             <div className="border-t border-white/10 bg-ink-900/40 p-8 sm:p-12 lg:border-l lg:border-t-0 lg:p-14">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSent(true)
-                }}
-                className="space-y-5"
-              >
+              <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Spam koruması: bal küpü (honeypot) — gizli, botlar doldurur */}
+                <p className="hidden">
+                  <label>
+                    Doldurmayın: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </p>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label={f.name} name="name" placeholder={f.namePh} />
                   <Field
@@ -104,10 +149,13 @@ export default function Contact() {
 
                 <motion.button
                   type="submit"
+                  disabled={status === 'sending' || sent}
                   whileTap={{ scale: 0.98 }}
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink-900 transition-colors hover:bg-white/90"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink-900 transition-colors hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  {sent ? (
+                  {status === 'sending' ? (
+                    f.sending
+                  ) : sent ? (
                     f.sent
                   ) : (
                     <>
@@ -120,6 +168,9 @@ export default function Contact() {
                   <p className="flex items-center justify-center gap-2 text-sm text-brand-sky">
                     <Send className="h-4 w-4" /> {f.sentNote}
                   </p>
+                )}
+                {status === 'error' && (
+                  <p className="text-center text-sm text-red-400">{f.error}</p>
                 )}
               </form>
             </div>

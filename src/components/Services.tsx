@@ -42,10 +42,11 @@ export default function Services() {
             return (
               <motion.div
                 key={s.title}
+                id={meta.id}
                 variants={staggerChild}
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.06]"
+                className="group relative flex scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.06]"
               >
                 <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br from-brand-blue/0 to-brand-purple/0 blur-2xl transition-all duration-500 group-hover:from-brand-blue/20 group-hover:to-brand-purple/20" />
 

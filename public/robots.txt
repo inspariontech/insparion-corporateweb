@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://insparion.com.tr/sitemap.xml

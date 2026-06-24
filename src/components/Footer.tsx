@@ -9,7 +9,9 @@ export default function Footer() {
       <div className="container-x py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo variant="white" className="h-[7.5rem] w-auto" />
+            <a href="/" aria-label="INSPARION">
+              <Logo variant="white" className="h-[7.5rem] w-auto" />
+            </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/55">
               {c.footer.tagline}
             </p>
@@ -32,12 +34,12 @@ export default function Footer() {
               </h4>
               <ul className="mt-5 space-y-3">
                 {col.links.map((l) => (
-                  <li key={l}>
+                  <li key={l.label}>
                     <a
-                      href="#services"
+                      href={l.href}
                       className="text-sm text-white/65 transition-colors hover:text-white"
                     >
-                      {l}
+                      {l.label}
                     </a>
                   </li>
                 ))}
@@ -52,8 +54,12 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6 text-sm text-white/40">
             {c.footer.legal.map((l) => (
-              <a key={l} href="#" className="transition-colors hover:text-white/70">
-                {l}
+              <a
+                key={l.label}
+                href={l.href}
+                className="transition-colors hover:text-white/70"
+              >
+                {l.label}
               </a>
             ))}
           </div>

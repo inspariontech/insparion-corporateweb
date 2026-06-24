@@ -1,0 +1,3 @@
+# SPA fallback — istemci tarafı yönlendirme (react-router) için
+# Gerçek dosyalar (assets, images) önce servis edilir; eşleşmeyen yollar index.html'e döner.
+/*    /index.html   200

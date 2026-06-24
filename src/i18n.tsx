@@ -245,8 +245,11 @@ const content = {
         project: 'Projeniz',
         projectPh: 'Kısaca anlatın...',
         submit: 'Mesaj gönder',
+        sending: 'Gönderiliyor...',
         sent: 'Teşekkürler! En kısa sürede dönüş yapacağız.',
         sentNote: 'İletiniz alındı.',
+        error:
+          'Bir hata oluştu. Lütfen tekrar deneyin ya da tech@insparion.com.tr adresine yazın.',
       },
     },
     footer: {
@@ -257,20 +260,28 @@ const content = {
         {
           title: 'Hizmetler',
           links: [
-            'Ürün Keşfi & Strateji',
-            'Tasarım & UX',
-            'Yazılım Mühendisliği',
-            'Veri & Yapay Zekâ',
-            'Pazarlama & Büyüme',
+            { label: 'Ürün Keşfi & Strateji', href: '/#product-discovery-strategy' },
+            { label: 'Tasarım & UX', href: '/#design-ux' },
+            { label: 'Yazılım Mühendisliği', href: '/#software-engineering' },
+            { label: 'Veri & Yapay Zekâ', href: '/#data-ai' },
+            { label: 'Pazarlama & Büyüme', href: '/#marketing-growth' },
           ],
         },
         {
           title: 'Şirket',
-          links: ['Hakkımızda', 'Yaklaşımımız', 'Yaşam Döngüsü', 'İletişim'],
+          links: [
+            { label: 'Hakkımızda', href: '/#about' },
+            { label: 'Yaklaşımımız', href: '/#approach' },
+            { label: 'Yaşam Döngüsü', href: '/#lifecycle' },
+            { label: 'İletişim', href: '/#contact' },
+          ],
         },
       ],
       rights: 'Tüm hakları saklıdır.',
-      legal: ['Gizlilik', 'KVKK', 'Şartlar'],
+      legal: [
+        { label: 'Gizlilik', href: '/gizlilik' },
+        { label: 'KVKK', href: '/kvkk' },
+      ],
     },
   },
 
@@ -506,8 +517,11 @@ const content = {
         project: 'Your project',
         projectPh: 'Tell us briefly...',
         submit: 'Send message',
+        sending: 'Sending...',
         sent: "Thank you! We'll get back to you shortly.",
         sentNote: 'Your message has been received.',
+        error:
+          'Something went wrong. Please try again or email tech@insparion.com.tr.',
       },
     },
     footer: {
@@ -518,20 +532,28 @@ const content = {
         {
           title: 'Services',
           links: [
-            'Product Discovery & Strategy',
-            'Design & UX',
-            'Software Engineering',
-            'Data & AI',
-            'Marketing & Growth',
+            { label: 'Product Discovery & Strategy', href: '/#product-discovery-strategy' },
+            { label: 'Design & UX', href: '/#design-ux' },
+            { label: 'Software Engineering', href: '/#software-engineering' },
+            { label: 'Data & AI', href: '/#data-ai' },
+            { label: 'Marketing & Growth', href: '/#marketing-growth' },
           ],
         },
         {
           title: 'Company',
-          links: ['About', 'Approach', 'Lifecycle', 'Contact'],
+          links: [
+            { label: 'About', href: '/#about' },
+            { label: 'Approach', href: '/#approach' },
+            { label: 'Lifecycle', href: '/#lifecycle' },
+            { label: 'Contact', href: '/#contact' },
+          ],
         },
       ],
       rights: 'All rights reserved.',
-      legal: ['Privacy', 'KVKK', 'Terms'],
+      legal: [
+        { label: 'Privacy', href: '/privacy' },
+        { label: 'KVKK', href: '/kvkk' },
+      ],
     },
   },
 }
