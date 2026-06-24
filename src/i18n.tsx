@@ -322,49 +322,49 @@ const content = {
     ],
     about: {
       eyebrow: 'Beyond software delivery',
-      title: 'We turn technology into lasting business advantage.',
-      body: 'We unite strategy, design, engineering and operations in one delivery model — building platforms that create value from day one and grow stronger as they scale.',
+      title: 'We deliver business outcomes, not just software.',
+      body: 'We bring strategy, design, engineering and operations together under one team, so your product ships faster, performs in production and keeps improving as it grows.',
       pillars: [
         {
-          title: 'Connected delivery model',
-          text: 'Strategy, design, engineering and operations — one flow, not fragmented vendors.',
+          title: 'One integrated team',
+          text: 'Strategy, design, engineering and operations in a single team — not a chain of separate vendors.',
         },
         {
-          title: 'One accountable team',
-          text: 'A single accountable team instead of scattered consultants and agencies.',
+          title: 'A single point of accountability',
+          text: 'One partner answerable for the result, instead of coordinating consultants, designers and agencies.',
         },
         {
-          title: 'Measurable impact',
-          text: 'Not just a product — measurable outcomes across revenue, growth and investment readiness.',
+          title: 'Measured on results',
+          text: 'We are measured on revenue, growth and investment readiness — not just deliverables.',
         },
         {
           title: 'End-to-end ownership',
-          text: 'We define the opportunity, build the product and drive post-launch growth.',
+          text: 'We own the work from opportunity definition to build and post-launch growth.',
         },
       ],
-      imageCaption: 'From idea to scale — one team, one continuous process.',
+      imageCaption: 'From first idea to scale, delivered by one team.',
     },
     stats: [
       { value: 12, prefix: '', suffix: '', label: 'End-to-end service disciplines' },
-      { value: 100, prefix: '', suffix: '%', label: 'Single-hand ownership' },
+      { value: 100, prefix: '', suffix: '%', label: 'Ownership, end to end' },
       { value: 360, prefix: '', suffix: '°', label: 'Product lifecycle coverage' },
       { value: 1, prefix: '#', suffix: '', label: 'One team, one accountability' },
     ],
     manifesto: {
-      quotePre: '“Not fragmented vendors — from strategy to code, from design to growth,',
-      quoteAccent: 'one single team.”',
-      sub: 'From idea to global scale, we run every step with a single accountability.',
+      quotePre: '“Not a chain of vendors — from strategy to code, from design to growth,',
+      quoteAccent: 'one team.”',
+      sub: 'We run every stage, from first idea to global scale, as your single accountable partner.',
     },
     services: {
       eyebrow: 'Our Services',
       titlePre: 'Every capability',
       titleAccent: 'a product needs',
       subtitle:
-        'From strategy to code, from design to growth — 12 disciplines within one integrated team.',
+        'From strategy to code and design to growth — twelve disciplines inside one team.',
       items: [
         {
           title: 'Product Discovery & Strategy',
-          summary: 'We shape the right product vision and growth path with data.',
+          summary: 'We define what to build and how it wins, backed by market and user research.',
           items: [
             'Market, competitor & user research',
             'Product strategy & roadmap',
@@ -373,16 +373,16 @@ const content = {
         },
         {
           title: 'Design & User Experience',
-          summary: 'We design clear, trusted, conversion-focused experiences.',
+          summary: 'We design interfaces that are clear to use and built to convert.',
           items: [
             'UX research & UX/UI design',
-            'Design System & prototyping',
+            'Design system & prototyping',
             'Usability & conversion optimization',
           ],
         },
         {
           title: 'Technology & Software Engineering',
-          summary: 'We engineer secure, scalable mobile, web and platform products.',
+          summary: 'We build secure, scalable mobile, web and platform products.',
           items: [
             'Mobile, web & platform development',
             'APIs, databases & integrations',
@@ -400,7 +400,7 @@ const content = {
         },
         {
           title: 'Data, Analytics & AI',
-          summary: 'We turn data and AI into operational intelligence.',
+          summary: 'We put data and AI to work in everyday operations and decisions.',
           items: [
             'BI & dashboard design',
             'Recommendation, matching & scoring',
@@ -409,7 +409,7 @@ const content = {
         },
         {
           title: 'Operations & Business Processes',
-          summary: 'We design processes end to end to raise operational efficiency.',
+          summary: 'We design and run operations that scale without losing efficiency.',
           items: [
             'Operation & process design',
             'Customer service & quality management',
@@ -427,7 +427,7 @@ const content = {
         },
         {
           title: 'Marketing & Growth',
-          summary: 'Sustainable growth from brand strategy to performance marketing.',
+          summary: 'Growth across the funnel, from brand strategy to performance marketing.',
           items: [
             'Brand & digital marketing strategy',
             'SEO / ASO & performance marketing',
@@ -436,7 +436,7 @@ const content = {
         },
         {
           title: 'Creative, Media & Communication',
-          summary: 'Content and production that strengthen the brand at every touchpoint.',
+          summary: 'Brand, content and production across every customer touchpoint.',
           items: [
             'Corporate identity & graphic design',
             'Video, photography & motion design',
@@ -454,7 +454,7 @@ const content = {
         },
         {
           title: 'Intellectual Property & Rights Management',
-          summary: 'We protect created value through patent, trademark and license processes.',
+          summary: 'We protect what you build through patent, trademark and licensing.',
           items: [
             'Patent & trademark registration',
             'Copyright & license management',
@@ -463,7 +463,7 @@ const content = {
         },
         {
           title: 'End-to-End Product Lifecycle',
-          summary: 'We manage the entire lifecycle from idea to scale, from a single hand.',
+          summary: 'We run the full product lifecycle, from first idea to scale.',
           items: [
             'Discovery, design & development',
             'Go-live & operations',
@@ -476,37 +476,37 @@ const content = {
       eyebrow: 'Our Approach',
       titlePre: 'A clear process,',
       titleAccent: 'predictable outcomes',
-      note: 'Transparent communication and measurable outputs at every stage — an uninterrupted flow from discovery to growth.',
+      note: 'Clear communication and measurable progress at every stage, from discovery through to growth.',
       steps: [
-        { title: 'Discover', text: 'We uncover the real opportunity and clarify the market and product vision.' },
-        { title: 'Design', text: 'We make the solution tangible — shaping the experience and design system.' },
-        { title: 'Engineer', text: 'We build the product securely, engineered for performance and scale.' },
-        { title: 'Grow', text: 'We run the product and drive sustainable growth with data and marketing.' },
+        { title: 'Discover', text: 'We pin down the real opportunity and align on market and product direction.' },
+        { title: 'Design', text: 'We shape the experience, interface and design system into a working prototype.' },
+        { title: 'Engineer', text: 'We build the product to production standards, ready for performance and scale.' },
+        { title: 'Grow', text: 'We operate the product and grow it with data, marketing and steady iteration.' },
       ],
     },
     lifecycle: {
       eyebrow: 'End-to-End Lifecycle',
-      titlePre: 'From ambition to measurable',
-      titleAccent: 'impact',
-      titlePost: ' — we are with you all the way.',
-      body: 'From discovery and operations to growth and investment readiness, one team runs, manages and coordinates every stage of the product.',
+      titlePre: 'From first idea to a',
+      titleAccent: 'scalable business',
+      titlePost: '.',
+      body: 'One team runs, manages and coordinates every stage — discovery, build, launch, operations, growth and investment readiness.',
       phases: [
-        { label: 'Discover', desc: 'We uncover the real opportunity.' },
-        { label: 'Define', desc: 'We establish the path forward.' },
-        { label: 'Design', desc: 'We make the solution tangible.' },
-        { label: 'Engineer', desc: 'We engineer for performance and scale.' },
-        { label: 'Operate', desc: 'We make the product work in the real world.' },
-        { label: 'Grow', desc: 'We improve what happens after launch.' },
+        { label: 'Discover', desc: 'We pin down the real opportunity.' },
+        { label: 'Define', desc: 'We set the direction and scope.' },
+        { label: 'Design', desc: 'We shape the product and its experience.' },
+        { label: 'Engineer', desc: 'We build for performance and scale.' },
+        { label: 'Operate', desc: 'We run it reliably in production.' },
+        { label: 'Grow', desc: 'We grow the product after launch.' },
       ],
     },
     contact: {
       eyebrow: 'Contact',
       titlePre: "Let's build your next product",
       titleAccent: 'together.',
-      body: 'Tell us about your idea, your current product or your growth goal — and we will set off with the right team.',
+      body: 'Tell us about your idea, your current product or your growth goal, and we will put the right team on it.',
       emailLabel: 'Email',
       locationLabel: 'Location',
-      location: 'Türkiye · Serving at global scale',
+      location: 'Türkiye · Working with clients globally',
       form: {
         name: 'Full Name',
         namePh: 'Your name',
@@ -526,8 +526,8 @@ const content = {
     },
     footer: {
       tagline:
-        'An end-to-end technology partner for building, transforming and scaling digital businesses.',
-      slogan: 'From ambition to technology. From technology to impact.',
+        'An end-to-end technology partner for building, scaling and transforming digital businesses.',
+      slogan: 'From idea to technology, from technology to value.',
       cols: [
         {
           title: 'Services',
